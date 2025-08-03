@@ -8,16 +8,11 @@ css reset
   margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
-
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   height: 1500px;
+  font-family: Roboto, Arial;
 }
 
 img, picture, video, canvas, svg {
@@ -44,9 +39,6 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-div{
-  font-family: Roboto, Arial;
-}
 .header{
   background-color: rgb(91, 149, 188);
   color: white;
@@ -178,7 +170,6 @@ div{
   margin-bottom: 10px;
   border-bottom: 2px solid rgb(173, 173, 173);
   padding-bottom: 5px;
-  margin-bottom: 10px;
 }
 
 .friends-text{
@@ -359,4 +350,69 @@ a:hover{
 
 .language{
     color: rgb(109, 108, 108);
+}
+@media (max-width: 480px) { 
+  .header{
+    width: 100vw;
+  }
+
+  .trending-topics{
+    width: 100vw;
+    font-size: 0.5rem;
+  }
+
+  .tweets{
+    width: 62%;
+  }
+}
+
+@media (max-width: 751px) and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+
+  .top-tweets {
+    display: block;
+    margin: 50px auto;
+    position: relative;
+    left: 0;
+  }
+
+  .container{
+   margin-top: 35px;
+  }
+
+  .new{
+    padding-left: 10px;
+  }
+.new-container{
+  position: relative;
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 90%;
+  box-shadow:2px 3px 6px rgba(0, 0, 0, 0.25);
+}
+.twitter-bird{
+  margin-top: 10px;
+}
+.space{
+  background-color: lightblue;
+  max-width: 90%;
+  margin: 10px auto;
+}
+  .tweets,
+  .name {
+    font-size: 0.7rem;
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 50px;
+    font-size: 0.7rem;
+  }
 }
